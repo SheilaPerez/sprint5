@@ -1,0 +1,21 @@
+{
+  "name": "sprint5",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SheilaPerez/sprint5.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SheilaPerez/sprint5/issues"
+  },
+  "homepage": "https://github.com/SheilaPerez/sprint5#readme",
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
+}
