@@ -6,7 +6,12 @@ function btnNextJoke() :void {
         }
     })
         .then((response) => response.json())
-        .then(data => { console.log(data.joke) })
+        .then(data => {
+            let joke = document.getElementById('jokes') 
+            joke.innerHTML = `
+            <p>${data.joke}</p>
+            `
+         })
         .catch(error => console.log(error))
 }
 

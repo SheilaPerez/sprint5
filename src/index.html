@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./style.css" rel="stylesheet">
+
+        <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <h1>Jokes</h1>
-        <button type="button" onclick="btnNextJoke()">Next joke</button>
+        <div class="container jokeContainer shadow p-3 mb-5 bg-body rounded mt-5">      
+            <h1 class="title mb-4">Make your day happiest</h1>
+            <div id="jokes"></div>
+            <button type="button" onclick="btnNextJoke()" class="btn btn-outline-info textBtn">Get the joke</button>
+        </div>
     </body>
 
     <script src="file.js"></script>
