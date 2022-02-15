@@ -12,3 +12,19 @@
     color: rgb(141, 172, 141);
     background-color: white;
 }
+
+.starBtn {
+    width: 20px;
+    height: 23px;
+}
+
+.pointBtn {
+    background-color: white;
+    border: 2px #ECB390 solid;
+}
+
+.pointsBtns {
+    display: flex;
+    justify-content: center;
+    
+}
