@@ -42,6 +42,12 @@ function randomChuckJokes() {
     .then((response) => response.json())
         .then((data) => {
         randomJoke = "randomChuckJokes";
+            reportJokes.push({
+                joke: data.value,
+                score: 0,
+                date: date.toISOString()
+            })    
+        currentJoke = data.value;
         let chuckJoke = document.getElementById('jokes') 
         chuckJoke.innerHTML = `
         <p>${data.value}</p>
@@ -82,8 +88,11 @@ fetch('http://api.openweathermap.org/data/2.5/weather?lat=41&lon=2&appid=a368acc
 
         let weather = document.getElementById('weather');
         weather.innerHTML = `
-        <p>${data.weather[0].description}</p>
-        <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png">`
+        <div class="weather m-5">
+            <p class="weatherTitle">${'Wheather: '}</p>
+            <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png">
+        </div>
+        `
     })
     .catch(error => console.log(error))
 

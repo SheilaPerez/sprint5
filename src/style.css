@@ -38,4 +38,9 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+.weatherTitle {
+  color: #86C6F4;
+  display: inline-block;
+}
 /*# sourceMappingURL=style.css.map */

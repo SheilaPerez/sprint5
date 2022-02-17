@@ -27,6 +27,12 @@ function randomChuckJokes() {
         .then(function (response) { return response.json(); })
         .then(function (data) {
         randomJoke = "randomChuckJokes";
+        reportJokes.push({
+            joke: data.value,
+            score: 0,
+            date: date.toISOString()
+        });
+        currentJoke = data.value;
         var chuckJoke = document.getElementById('jokes');
         chuckJoke.innerHTML = "\n        <p>".concat(data.value, "</p>\n        <div class=\"pointsBtns mb-4\">\n            <button type=\"button\" onclick=\"sumPoints(1)\" class=\"pointBtn me-3 rounded\"><img class=\"starBtn pb-1\" src=\"/images/estrella.png\" alt=\"\"></button>\n            <button type=\"button\" onclick=\"sumPoints(2)\" class=\"pointBtn me-3 rounded\"><img class=\"starBtn pb-1\" src=\"/images/estrella.png\" alt=\"\"><img class=\"starBtn pb-1\" src=\"/images/estrella.png\" alt=\"\"></button>\n            <button type=\"button\" onclick=\"sumPoints(3)\" class=\"pointBtn me-3 rounded\"><img class=\"starBtn pb-1\" src=\"/images/estrella.png\" alt=\"\"><img class=\"starBtn pb-1\" src=\"/images/estrella.png\" alt=\"\"><img class=\"starBtn pb-1\" src=\"/images/estrella.png\" alt=\"\"></button>\n        </div>\n        ");
     })["catch"](function (error) { return console.log(error); });
@@ -52,5 +58,5 @@ fetch('http://api.openweathermap.org/data/2.5/weather?lat=41&lon=2&appid=a368acc
     .then(function (response) { return response.json(); })
     .then(function (data) {
     var weather = document.getElementById('weather');
-    weather.innerHTML = "\n        <p>".concat(data.weather[0].description, "</p>\n        <img src=\"https://openweathermap.org/img/wn/").concat(data.weather[0].icon, ".png\">");
+    weather.innerHTML = "\n        <div class=\"weather m-5\">\n            <p class=\"weatherTitle\">".concat('Wheather: ', "</p>\n            <img src=\"https://openweathermap.org/img/wn/").concat(data.weather[0].icon, ".png\">\n        </div>\n        ");
 })["catch"](function (error) { return console.log(error); });
