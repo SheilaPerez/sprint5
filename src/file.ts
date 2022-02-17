@@ -47,6 +47,17 @@ function sumPoints(point: number) {
     console.log(reportJokes);
 }
 
+fetch('http://api.openweathermap.org/data/2.5/weather?lat=41&lon=2&appid=a368acc4079e173d9d9dd14dbc666c54')
+    .then((response) => response.json())
+    .then((data) => { console.log(data)
+        let weather = document.getElementById('weather');
+        weather.innerHTML = `
+        <p>${data.weather[0].description}</p>
+        <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png">`
+    })
+    .catch(error => console.log(error))
+
+
 
 
 
