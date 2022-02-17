@@ -1,0 +1,46 @@
+.jokeContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.title {
+  color: #DD4A48;
+}
+
+.textBtn:hover {
+  color: #8dac8d;
+  background-color: white;
+}
+
+.starBtn {
+  width: 20px;
+  height: 23px;
+}
+
+.pointBtn {
+  background-color: white;
+  border: 2px #ECB390 solid;
+}
+
+.pointsBtns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.weatherTitle {
+  color: #86C6F4;
+  display: inline-block;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,35 @@
+.jokeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    color: #DD4A48;
+}
+
+.textBtn:hover {
+    color: rgb(141, 172, 141);
+    background-color: white;
+}
+
+.starBtn {
+    width: 20px;
+    height: 23px;
+}
+
+.pointBtn {
+    background-color: white;
+    border: 2px #ECB390 solid;
+}
+
+.pointsBtns {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.weatherTitle {
+    color: #86C6F4; 
+    display: inline-block;
+}
